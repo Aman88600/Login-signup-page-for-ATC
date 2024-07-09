@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <!-- Include any additional CSS or scripts here -->
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome, {{ user.username }}</h1>
+        <p>Email: {{ user.email }}</p>
+        <p>User Type : {{ user.user_type }}</p>
+        {% if user.profile_picture %}
+        <img src="{{ user.profile_picture }}" alt="Profile Picture">
+        {% else %}
+        <p>No profile picture available</p>
+        {% endif %}
+        <!-- Add more details as per your CustomUser model fields -->
+    </div>
+</body>
+
+</html>

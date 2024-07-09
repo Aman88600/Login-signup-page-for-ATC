@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Signup</title>
+    <link rel="stylesheet" href="{% static 'login_signup/styles.css' %}">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button-container a {
+            display: block;
+            margin: 20px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container">
+        <a href="{% url 'login_signup:login' %}">
+            <button type="button" class="btn btn-primary">Login</button>
+        </a>
+        <a href="{% url 'login_signup:signup' %}">
+            <button type="button" class="btn btn-danger">Sign Up</button>
+        </a>
+    </div>
+
+</body>
+
+</html>
